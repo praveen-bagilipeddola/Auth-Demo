@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@praveen-bagilipeddola/private-test-package": "^1.0.7"
+    "@praveen-bagilipeddola/private-test-package": "^1.1.0"
   }
 }
