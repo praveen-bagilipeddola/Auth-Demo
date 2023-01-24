@@ -24,6 +24,6 @@ jobs:
     - name: npm install
       run: npm install
       env:
-        NODE_AUTH_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+        ENV_VARIABLE: ${{ secrets.MY_GITHUB_TOKEN }}
     - name: Showing Tree
       run: tree -L 4
