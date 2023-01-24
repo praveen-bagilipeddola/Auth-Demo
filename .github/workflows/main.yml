@@ -1,29 +1,16 @@
-name: NPM GitHub Actions
-
-on: [push]
-
 jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [10.x]
-
+  ci:
+    name: Run Tests
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: Installing Tree
-      run: sudo apt-get install tree
-    - name: Showing Tree
-      run: tree -L 4
-    - name: npm install
-      run: npm install
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
-    - name: Showing Tree
-      run: tree -L 4
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+          registry-url: https://npm.pkg.github.com/
+
+      - uses: actions/checkout@v2
+
+      - name: Install dependencies based on package-lock.json
+        run: npm ci
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
