@@ -8,8 +8,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@praveen-bagilipeddola/private-test-package": "^1.0.7"
-  }
+  "license": "ISC"
 }
