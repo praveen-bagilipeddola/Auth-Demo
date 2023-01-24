@@ -1,6 +1,6 @@
 {
   "name": "auth-demo",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@praveen-bagilipeddola/private-test-package": "^1.0.5"
+    "@praveen-bagilipeddola/private-test-package": "^1.0.7"
   }
 }
