@@ -1,3 +1,7 @@
+name: NPM GitHub Actions
+
+on: [push]
+
 jobs:
   build:
 
@@ -5,7 +9,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x,12.x]
+        node-version: [10.x, 12.x]
 
     steps:
     - uses: actions/checkout@v1
@@ -20,6 +24,6 @@ jobs:
     - name: npm install
       run: npm install
       env:
-        NODE_AUTH_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+        NPM_AUTH_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
     - name: Showing Tree
       run: tree -L 4
